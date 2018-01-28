@@ -221,14 +221,10 @@ console.log(addItem(myGroceryList,"beef"));
 
 //Code Here
 
-function maker(array){
+function maker(){
   let arr = [];
-  for(let i=0;i<=array.length;i++){
-    if(array[i]>0){
-      if(array[i]<=215){
-        arr.push(array[i]);
-      }
-    }else{}
+  for(let i=1;i<=215;i++){
+  arr.push(i);
   }
   return arr;
 }
@@ -250,19 +246,14 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
   
 //Code Here
 function addTen(arr){
-    
+    console.log('addTen1',arr);
   for(var i = 0; i < arr.length; i++){
-    arr[i] = parseInt(arr[i]);
+    arr[i] = parseInt(arr[i])+10;
   }
-  
-  numbers.forEach(function(val, i, arr){
-    
-    arr[i] = val + 10;
-  });
   return arr;
 }
 
-console.log(addTen(numbers));
+console.log('addTen',addTen(numbers));
 
 
 
@@ -291,15 +282,13 @@ for(var i = 0; i < num2; i++){
 
 //Code Here
 function longer(arr1,arr2){
-  let newArray=[];
   if(arr1.length>arr2.length){
-   newArray.push(arr1);
-  }else if(arr1.length<arr2.length){
-    newArray.push(arr2);
-  }return newArray;
+    return arr1;
+  }else{
+    return arr2;
+  }
 }
 
-console.log(longer([1,2,3],[4,5,6,7,8]));
 
 
 

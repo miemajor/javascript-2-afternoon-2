@@ -21,7 +21,7 @@ var arr = [10,20,30];
 function first(arr){
   return arr[0];
 }
-console.log(first(arr));
+
 
 
 
@@ -40,8 +40,6 @@ var arr = [40,50,60];
 function last(arr){
   return arr[arr.length-1];
 }
-console.log(last(arr));
-
 
 ////////// PROBLEM 3 //////////
 
@@ -60,7 +58,6 @@ function looper(family){
     alert(family[i]);
   }
 }
-console.log(looper(family));
 
 ////////// PROBLEM 4 //////////
 
@@ -79,8 +76,6 @@ function reversedLooper(letters){
     alert(letters[i]);
   }
 }
-console.log(reversedLooper(letters));
-
 
 
 
@@ -96,17 +91,15 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 */
 
 //Code Here
-function evenFinder(arr){
-  let arr1=[];
-  for(let i=0;i<arr.length;i++){
-    if(arr[i]%2===0){
-      arr1.push(arr[i]);
+function evenFinder(nums){
+  let arr1 = [];
+  for(let i=0; i<nums.length; i++){
+    if(nums[i]%2===0){
+     arr1.push(nums[i]);
     }
-  }
+  } 
   return arr1;
 }
-console.log(evenFinder(nums));
-
 
 
 ////////// EXTRA PRACTICE PROBLEMS BELOW //////////
@@ -123,6 +116,21 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 */
 
 //Code Here
+function divider(arr){
+  let evensArray = [];
+  let oddsArray = [];
+  for(let i=0; i<arr.length; i++){
+    if(arr[i]%2===0){
+      evensArray.push(arr[i]);
+     
+    }else if(arr[i]!==0){
+      oddsArray.push(arr[i]);
+      
+    }
+  }
+  return [evensArray,oddsArray];
+ 
+}
 
 
 
@@ -144,6 +152,15 @@ var getRandomArbitrary = function() {
 */
 
 //Code Here
+function finder(arr){
+    let rand = getRandomArbitrary();
+  	console.log(rand);
+  	return arr.indexOf(rand) === -1 ? false: true;
+  }
+
+
+
+
 
 
 
@@ -170,7 +187,29 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   addItem(myGroceryList, 'Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
 */
 
+
+
 //Code Here
+function removeItem(myGroceryList,removeFromGroceryList){
+  for(let i=0;i<myGroceryList.length;i++){
+    if(myGroceryList[i]===removeFromGroceryList){
+      myGroceryList.splice([i],1);
+    }else{
+    }
+  }
+  return myGroceryList;
+}
+console.log(removeItem(myGroceryList,"pizza"));
+
+
+function addItem(myGroceryList,addToGroceryList){
+  myGroceryList.push(addToGroceryList);
+  return myGroceryList;
+}
+console.log(addItem(myGroceryList,"beef"));
+
+
+
 
 
 
@@ -181,6 +220,19 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 //Code Here
+
+function maker(array){
+  let arr = [];
+  for(let i=0;i<=array.length;i++){
+    if(array[i]>0){
+      if(array[i]<=215){
+        arr.push(array[i]);
+      }
+    }else{}
+  }
+  return arr;
+}
+
 
 
 
@@ -197,6 +249,22 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 */
   
 //Code Here
+function addTen(arr){
+    
+  for(var i = 0; i < arr.length; i++){
+    arr[i] = parseInt(arr[i]);
+  }
+  
+  numbers.forEach(function(val, i, arr){
+    
+    arr[i] = val + 10;
+  });
+  return arr;
+}
+
+console.log(addTen(numbers));
+
+
 
 
 
@@ -222,6 +290,16 @@ for(var i = 0; i < num2; i++){
 */
 
 //Code Here
+function longer(arr1,arr2){
+  let newArray=[];
+  if(arr1.length>arr2.length){
+   newArray.push(arr1);
+  }else if(arr1.length<arr2.length){
+    newArray.push(arr2);
+  }return newArray;
+}
+
+console.log(longer([1,2,3],[4,5,6,7,8]));
 
 
 
@@ -234,6 +312,16 @@ for(var i = 0; i < num2; i++){
 */
 
 //Code Here
+function both(arr1,arr2){
+  let newArray=[];
+  for(let i=0;i<arr1.length;i++){
+    if(arr1[i]===arr2[i]){
+      newArray.push(arr1[i]);
+    }
+  }
+  return newArray;
+}
+console.log(both(arr1,arr2));
 
 
 
@@ -274,6 +362,13 @@ var colt = {
 */
 
 //Code Here
+function fillDevMountainArray(arr,obj1,obj2,obj3,obj4){
+  arr.push(obj1,obj2,obj3,obj4);
+}
+console.log(fillDevMountainArray(devMountainEmployees,tyler,cahlan,ryan,colt));
+console.log(devMountainEmployees.length);
+
+
 
 
 
@@ -283,6 +378,14 @@ var colt = {
 */
 
 //Code Here
+function removeCahlan(arr){
+  for(i=0;i<arr.length;i++)
+  if(arr[i]===cahlan){
+    arr.splice(arr[i],1);
+    return arr;
+  }
+}
+console.log(removeCahlan(devMountainEmployees));
 
 
 
@@ -295,6 +398,7 @@ var colt = {
 */
 
 //Code Here
+let users = [];
 
 
 
